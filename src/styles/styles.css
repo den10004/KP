@@ -1,4 +1,5 @@
 @import "./header.css";
+@import "./hero.css";
 @import "./normalize.css";
 @import "../vendor/fonts.css";
 
@@ -15,11 +16,8 @@ body {
 
 
 :root {
-  --primary-color: #3498db;
-  --secondary-color: #2ecc71;
-  --accent-color: #e74c3c;
-  --dark-color: #2c3e50;
-  --light-color: #ecf0f1;
+  --primary-black: rgba(34, 34, 34, 1);
+
 }
 
 

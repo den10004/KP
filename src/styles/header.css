@@ -1,6 +1,6 @@
 .header__container {
     font-family: "Onest";
-    color: rgba(34, 34, 34, 1);
+    color: var(--primary-black);
     padding-top: 50px;
     width: 100%;
     display: flex;
@@ -17,7 +17,16 @@
 
 .header-burger {
     display: none;
+    flex-direction: column;
+    gap: 5px;
 }
+
+.header-burger>div {
+    width: 25px;
+    height: 3px;
+    background-color: var(--primary-black);
+}
+
 
 
 .header__container>ul {
