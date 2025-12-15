@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="src/styles/styles.css" />
     <title>Коммерческое предложение</title>
   </head>
+
   <body>
     <header class="wrapper">
       <div class="header__container">
@@ -57,7 +58,166 @@
       </div>
     </section>
 
+    <section class="specification">
+      <div class="specification__wrap">
+        <div>
+          <div class="specification__label">
+            <div class="label-dot"></div>
+            <span>Спецификация</span>
+          </div>
+
+          <div class="specification__block">
+            <div>
+              <div class="block__slider" style="position: relative">
+                <div
+                  style="
+                    --swiper-navigation-color: #fff;
+                    --swiper-pagination-color: #fff;
+                  "
+                  class="swiper big-pc-slider"
+                >
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide big-slider">
+                      <img src="./src/images/pc.png" />
+                    </div>
+                    <div class="swiper-slide big-slider">
+                      <img src="./src/images/pc.png" />
+                    </div>
+                    <div class="swiper-slide big-slider">
+                      <img src="./src/images/pc.png" />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+
+                <div thumbsSlider="" class="swiper small-pc-slider">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide small-slider">
+                      <img src="./src/images/pc.png" />
+                    </div>
+                    <div class="swiper-slide small-slider">
+                      <img src="./src/images/pc.png" />
+                    </div>
+                    <div class="swiper-slide small-slider">
+                      <img src="./src/images/pc.png" />
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+            <div class="block__desc">
+              <ul class="block__labels">
+                <li>Гарантия</li>
+                <li>Рассрочка 0%</li>
+                <li>Готов к отгрузке</li>
+              </ul>
+
+              <h3>Predator 2000</h3>
+              <p>
+                Игровой компьютер DigitalRazor Progaming с видеокартой Nvidia
+                Geforce RTX 5090 и процессором Ryzen 7-9800X3D в черном цвете.
+                <br />Мощная и производительная система рассчитана на
+                ультимативный гейминг в любые игры с высокими показателями FPS
+                на разрешениях 1440p (2K) и 2160p (4K).<br />
+                Компьютер собран в просторном и основательном корпусе
+                форм-фактора E-ATX. Позволяет устанавливать самые топовые
+                компоненты. В качестве материалов используется алюминий и
+                закаленное стекло с 3-х сторон. Системный блок имеет размеры:
+                480 x 464.5 x 304 мм.
+              </p>
+            </div>
+          </div>
+
+          <div class="block__specifications">
+            <h3>Характеристики</h3>
+
+            <ul>
+              <li>
+                <div>
+                  <p>Процессор</p>
+                  <span>LIAN LI O11 Vision Black</span>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <p>Процессор</p>
+                  <span>LIAN LI O11 Vision Black</span>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <p>Процессор</p>
+                  <span>LIAN LI O11 Vision Black</span>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <p>Процессор</p>
+                  <span>LIAN LI O11 Vision Black</span>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <p>Процессор</p>
+                  <span>LIAN LI O11 Vision Black</span>
+                </div>
+              </li>
+            </ul>
+
+            <button>
+              Посмотреть все характеристики&nbsp;
+              <svg
+                width="22"
+                height="12"
+                viewBox="0 0 22 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M0.390524 0.390523C0.911223 -0.130177 1.75544 -0.130177 2.27614 0.390523L10.6667 8.78105L19.0572 0.390522C19.5779 -0.130177 20.4221 -0.130177 20.9428 0.390522C21.4635 0.911221 21.4635 1.75544 20.9428 2.27614L11.6095 11.6095C11.0888 12.1302 10.2446 12.1302 9.72386 11.6095L0.390524 2.27614C-0.130175 1.75544 -0.130175 0.911222 0.390524 0.390523Z"
+                  fill="white"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="service">
+      <div class="wrapper">service</div>
+    </section>
+
     <footer>footer</footer>
   </body>
   <script src="./src/js/main.js"></script>
+  <script src="./src/js/swiper-bundle.min.js"></script>
+
+  <script>
+    var swiper = new Swiper(".small-pc-slider", {
+      spaceBetween: 10,
+      slidesPerView: 3,
+      freeMode: true,
+      watchSlidesProgress: true,
+    });
+    var swiper2 = new Swiper(".big-pc-slider", {
+      spaceBetween: 10,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      thumbs: {
+        swiper: swiper,
+      },
+    });
+  </script>
 </html>
