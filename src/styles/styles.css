@@ -3,9 +3,20 @@
 @import "./normalize.css";
 @import "../vendor/fonts.css";
 
+
+:root {
+  --primary-black: rgba(34, 34, 34, 1);
+  --primary-gray: rgba(51 51 51, 1);
+  --primary-blue: rgba(48, 139, 253, 1);
+  --hover-blue: rgba(35, 118, 221, 1);
+  --disabled: rgba(213, 213, 213, 1);
+  --white: rgba(255, 255, 255, 1);
+}
+
+
 body {
   padding: 0;
-  background: white;
+  background: var(--white);
   box-sizing: border-box;
 }
 
@@ -15,17 +26,54 @@ body {
 }
 
 
-:root {
-  --primary-black: rgba(34, 34, 34, 1);
-
-}
-
-
-
-
 .wrapper {
   display: flex;
   margin: 0 auto;
   max-width: 1345px;
   padding: 0 15px;
+}
+
+.button {
+  font-family: "Onest";
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 120%;
+  color: var(--white);
+  border-radius: 40px;
+  border: none;
+  padding: 30px;
+  cursor: pointer;
+}
+
+.btn-blue {
+  background-color: var(--primary-blue);
+}
+
+.btn-blue:hover {
+  background-color: var(--hover-blue);
+}
+
+.btn-blue:disabled {
+  background-color: var(--disabled);
+}
+
+
+.btn-orange {
+  background-color: linear-gradient(90deg, #FFE259 0%, #FFA751 100%);
+}
+
+.btn-orange:hover {
+  background-color: linear-gradient(90deg, #FCD000 0%, #FF8E1F 100%);
+
+}
+
+.btn-orange:disabled {
+  background-color: var(--disabled);
+}
+
+@media (max-width: 425px) {
+  .button {
+    font-size: 14px;
+    padding: 22px 32px;
+  }
 }

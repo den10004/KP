@@ -18,3 +18,10 @@
   font-weight: 600;
   src: url("./fonts/Onest-SemiBold.ttf") format("truetype");
 }
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: "Bold";
+  font-weight: 700;
+  src: url("./fonts/Montserrat-Bold.ttf") format("truetype");
+}
