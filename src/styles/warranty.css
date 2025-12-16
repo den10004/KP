@@ -3,17 +3,6 @@
 
 }
 
-.warranty__block {
-    width: 100%;
-    border-radius: 40px;
-    padding: 40px;
-    background: var(--primary-black);
-    font-family: "Onest";
-    color: var(--white);
-    text-align: left;
-    position: relative;
-}
-
 .warranty__block>h3 {
     font-size: 48px;
     font-weight: 600;
@@ -63,9 +52,6 @@
         font-size: 16px;
     }
 
-    .warranty__block {
-        padding: 32px 24px;
-    }
 
     .warranty__block>button {
         padding: 21px 52px;
@@ -78,10 +64,6 @@
 @media (max-width: 550px) {
     .warranty {
         margin-top: 65px;
-    }
-
-    .warranty__block {
-        border-radius: 22px;
     }
 
     .warranty__block>p {
