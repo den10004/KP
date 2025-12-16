@@ -5,35 +5,12 @@
     margin-top: 110px;
 }
 
-.specification__label {
-    width: 311px;
-    height: 78px;
-    border-radius: 40px;
-    padding: 16px 32px;
-    font-family: "Onest";
-    font-weight: 400;
-    font-size: 32px;
-    color: var(--white);
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    background: var(--primary-gray);
-    box-sizing: border-box;
-    margin: 0 auto;
-}
 
 .specification__wrap {
     max-width: 1320px;
     padding: 0 15px;
     margin: 0 auto;
     display: flex;
-}
-
-.label-dot {
-    width: 10px;
-    height: 10px;
-    background-color: var(--primary-blue);
-    border-radius: 50%;
 }
 
 /* slider*/
@@ -345,12 +322,6 @@
 }
 
 @media (max-width: 768px) {
-    .specification__label {
-        width: 226px;
-        height: 54px;
-        padding: 16px 32px;
-        font-size: 20px;
-    }
 
     .specification__block {
         margin-top: 30px;
@@ -448,13 +419,6 @@
 
     .specification__block {
         margin-top: 24px;
-    }
-
-    .specification__label {
-        width: 146px;
-        height: 41px;
-        padding: 16px 10px;
-        font-size: 14px;
     }
 
     .block__desc {
