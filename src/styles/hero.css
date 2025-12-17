@@ -81,10 +81,15 @@
     border-radius: 32px
 }
 
-.hero__main>button {
-    display: flex;
-    margin-top: 10px;
-    margin: 0 auto;
+.hero__main>.specification-blue {
+    display: flex !important;
+    margin: 10px auto 0 auto !important;
+}
+
+.specification-blue {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    display: inline-block !important;
 }
 
 .hero__label {

@@ -42,6 +42,9 @@ body {
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+}
 
 .wrapper {
   display: flex;
@@ -161,6 +164,20 @@ button {
   font-family: "Onest";
 }
 
+.specification-link {
+  padding: 28px 32px;
+  border-radius: 40px;
+  position: relative;
+  z-index: 2;
+  display: inline-flex;
+  font-family: "Onest";
+}
+
+.specification-link>a {
+  font-size: 20px;
+  font-weight: 400;
+}
+
 
 @media (max-width: 768px) {
   .label {
@@ -174,6 +191,17 @@ button {
 
   .section-wrap {
     padding: 32px 24px;
+  }
+
+  .specification-link {
+    padding: 21px 52px;
+    border-radius: 40px;
+  }
+
+  .specification-link>a {
+    font-size: 14px;
+    display: flex;
+    margin: 0 auto;
   }
 }
 
@@ -206,5 +234,12 @@ button {
   .label {
     padding: 16px 10px;
     font-size: 14px;
+  }
+}
+
+@media (max-width: 425px) {
+  .specification-link {
+    padding: 21px 2px;
+    width: 100%;
   }
 }

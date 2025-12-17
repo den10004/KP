@@ -55,8 +55,13 @@
               <img src="./src/images/hero2.webp" alt="компьютер" />
             </div>
           </div>
-
-          <button class="button btn-blue">Посмотреть спецификацию</button>
+          <div style="display: flex; justify-content: center">
+            <div class="specification-link btn-blue">
+              <a href="#description" style="color: var(--white)"
+                >Посмотреть спецификацию</a
+              >
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -139,7 +144,19 @@
           <div class="block__specifications">
             <h3>Характеристики</h3>
 
-            <ul>
+            <ul class="specifications__list" id="specs-list">
+              <li>
+                <div>
+                  <p>Процессор</p>
+                  <span>LIAN LI O11 Vision Black</span>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <p>Процессор</p>
+                  <span>LIAN LI O11 Vision Black</span>
+                </div>
+              </li>
               <li>
                 <div>
                   <p>Процессор</p>
@@ -172,8 +189,8 @@
               </li>
             </ul>
 
-            <button class="select-btn">
-              Посмотреть все характеристики&nbsp;
+            <button class="select-btn" id="toggle-btn" aria-expanded="false">
+              <span class="btn-text">Посмотреть все характеристики</span>
               <svg
                 width="22"
                 height="12"
@@ -514,7 +531,12 @@
             Гарантия VAC включена в покупку каждого компьютера в нашем магазине
             и составляет 12 месяцев с момента оформления заказа
           </p>
-          <button class="btn-white">Посмотреть спецификацию</button>
+
+          <div class="specification-link btn-white">
+            <a href="#description" style="color: var(--primary-black)"
+              >Посмотреть спецификацию</a
+            >
+          </div>
 
           <img src="./src/images/Flag.webp" alt="флаг" />
         </div>
@@ -779,7 +801,11 @@
         <div class="warranty__block section-wrap">
           <h3>Рассрочка</h3>
           <p>Возможность покупки без переплат 0%</p>
-          <button class="btn-white">Посмотреть спецификацию</button>
+          <div class="specification-link btn-white">
+            <a href="#description" style="color: var(--primary-black)"
+              >Посмотреть спецификацию</a
+            >
+          </div>
 
           <img src="./src/images/Flag.webp" alt="флаг" />
         </div>
@@ -963,6 +989,7 @@
   <script src="./src/js/swiper-bundle.min.js"></script>
 
   <script>
+    /*шапка*/
     document.addEventListener("DOMContentLoaded", () => {
       const burger = document.querySelector(".header-burger");
       const container = document.querySelector(".header__container");
@@ -974,13 +1001,52 @@
       const menuClone = navMenu.cloneNode(true);
       menuClone.style.display = "block";
       menuClone.style.flexDirection = "column";
-      menuClone.style.gap = "0";
+      menuClone.style.gap = "20px";
+      menuClone.style.padding = "20px";
 
       mobileMenu.appendChild(menuClone);
       container.appendChild(mobileMenu);
 
       burger.addEventListener("click", () => {
+        burger.classList.toggle("active");
         mobileMenu.classList.toggle("active");
+      });
+    });
+
+    /* спецификация*/
+    document.addEventListener("DOMContentLoaded", function () {
+      const list = document.getElementById("specs-list");
+      const items = list.querySelectorAll("li");
+      const btn = document.getElementById("toggle-btn");
+      const btnText = btn.querySelector(".btn-text");
+
+      const VISIBLE_COUNT = 5;
+
+      if (items.length <= VISIBLE_COUNT) {
+        btn.style.display = "none";
+        return;
+      }
+
+      for (let i = VISIBLE_COUNT; i < items.length; i++) {
+        items[i].style.display = "none";
+      }
+
+      btn.addEventListener("click", function () {
+        const isExpanded = btn.getAttribute("aria-expanded") === "true";
+
+        if (isExpanded) {
+          for (let i = VISIBLE_COUNT; i < items.length; i++) {
+            items[i].style.display = "none";
+          }
+          btnText.textContent = "Посмотреть все характеристики";
+          btn.setAttribute("aria-expanded", "false");
+        } else {
+          for (let i = VISIBLE_COUNT; i < items.length; i++) {
+            items[i].style.display = "block";
+          }
+          btnText.textContent = "Свернуть характеристики";
+          btn.setAttribute("aria-expanded", "true");
+        }
       });
     });
 
@@ -1005,6 +1071,7 @@
       },
     });
 
+    /* отзывы*/
     var swiper3 = new Swiper(".feedbackSlider", {
       slidesPerView: 1.5,
       spaceBetween: 30,
