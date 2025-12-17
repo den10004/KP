@@ -889,7 +889,7 @@
                 <div class="feedback">
                   <input
                     type="checkbox"
-                    id="feedback-toggle-1"
+                    id="feedback-toggle-2"
                     class="feedback-toggle"
                   />
 
@@ -904,7 +904,7 @@
                     </div>
                   </div>
 
-                  <label for="feedback-toggle-1" class="read-more-btn">
+                  <label for="feedback-toggle-2" class="read-more-btn">
                     <span class="expand-text">Читать полностью</span>
                     <span class="collapse-text">Свернуть</span>
                   </label>
@@ -932,7 +932,7 @@
                 <div class="feedback">
                   <input
                     type="checkbox"
-                    id="feedback-toggle-1"
+                    id="feedback-toggle-3"
                     class="feedback-toggle"
                   />
 
@@ -947,7 +947,7 @@
                     </div>
                   </div>
 
-                  <label for="feedback-toggle-1" class="read-more-btn">
+                  <label for="feedback-toggle-3" class="read-more-btn">
                     <span class="expand-text">Читать полностью</span>
                     <span class="collapse-text">Свернуть</span>
                   </label>
@@ -984,7 +984,7 @@
       </div>
     </footer>
   </body>
-  <script src="./src/js/main.js"></script>
+
   <script src="./src/js/select.js"></script>
   <script src="./src/js/swiper-bundle.min.js"></script>
 
@@ -1072,23 +1072,48 @@
     });
 
     /* отзывы*/
-    var swiper3 = new Swiper(".feedbackSlider", {
-      slidesPerView: 1.5,
-      spaceBetween: 30,
-      watchOverflow: true,
-      navigation: {
-        nextEl: ".feedbackSlider-button-next",
-        prevEl: ".feedbackSlider-button-prev",
-      },
-      breakpoints: {
-        320: {
-          slidesPerView: 1,
-        },
 
-        900: {
-          slidesPerView: 1.5,
-        },
-      },
+    document.addEventListener("DOMContentLoaded", function () {
+      const initSwiperIfNeeded = () => {
+        const feedbackSlider = document.querySelector(".feedbackSlider");
+
+        if (window.innerWidth > 550) {
+          if (feedbackSlider.classList.contains("swiper-initialized")) {
+            return;
+          }
+          var swiper3 = new Swiper(".feedbackSlider", {
+            slidesPerView: 1.5,
+            spaceBetween: 30,
+            watchOverflow: true,
+            navigation: {
+              nextEl: ".feedbackSlider-button-next",
+              prevEl: ".feedbackSlider-button-prev",
+            },
+            breakpoints: {
+              320: {
+                slidesPerView: 1,
+                spaceBetween: 16,
+              },
+              900: {
+                slidesPerView: 1.5,
+              },
+            },
+          });
+        } else {
+          if (
+            feedbackSlider.classList.contains("swiper-initialized") &&
+            feedbackSlider.swiper
+          ) {
+            feedbackSlider.swiper.destroy(true, true);
+          }
+        }
+      };
+      initSwiperIfNeeded();
+      let resizeTimeout;
+      window.addEventListener("resize", function () {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(initSwiperIfNeeded, 250);
+      });
     });
 
     document.querySelectorAll(".feedback").forEach((block) => {
