@@ -6,6 +6,7 @@
 @import "./efficiency.css";
 @import "./upgrade.css";
 @import "./feedback.css";
+@import "./footer.css";
 @import "./swiper-bundle.min.css";
 @import "./normalize.css";
 @import "../vendor/fonts.css";
@@ -17,6 +18,7 @@
   --primary-blue: rgba(48, 139, 253, 1);
   --hover-blue: rgba(35, 118, 221, 1);
   --disabled: rgba(213, 213, 213, 1);
+  --primary-gray189: rgba(189, 189, 189, 1);
   --white: rgba(255, 255, 255, 1);
   --white-01: rgba(255, 255, 255, 0.1);
   --primary-gray-light: rgba(249, 249, 249, 1);
@@ -43,6 +45,10 @@ body {
   margin: 0 auto;
   max-width: 1312px;
   padding: 0 15px;
+}
+
+.sectionMargin {
+  margin-top: 112px;
 }
 
 button {
@@ -170,6 +176,10 @@ button {
 
   .section-wrap {
     border-radius: 22px;
+  }
+
+  .sectionMargin {
+    margin-top: 64px;
   }
 }
 
