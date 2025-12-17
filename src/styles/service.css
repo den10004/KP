@@ -1,7 +1,3 @@
-.service {
-    margin-top: 120px;
-}
-
 .cards-grid {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -111,10 +107,6 @@
 }
 
 @media (max-width: 550px) {
-    .service {
-        margin-top: 60px;
-    }
-
     .service__card {
         height: 145px;
         grid-column: 1 / -1 !important;

@@ -1,5 +1,4 @@
 .efficiency {
-    margin-top: 112px;
     background-color: var(--primary-black);
     padding: 70px 0 50px 0;
     border-radius: 60px;
@@ -205,7 +204,6 @@
     }
 
     .efficiency {
-        margin-top: 70px;
         border-radius: 35px;
         padding: 26px 0 50px 0;
 
