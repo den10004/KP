@@ -151,6 +151,13 @@ button {
   background-color: var(--primary-black)
 }
 
+.logo {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 58px;
+  font-family: "Onest";
+}
+
 
 @media (max-width: 768px) {
   .label {
@@ -180,6 +187,10 @@ button {
 
   .sectionMargin {
     margin-top: 64px;
+  }
+
+  .logo {
+    font-size: 26px;
   }
 }
 
