@@ -60,6 +60,8 @@
     width: 25%;
     height: 100%;
     opacity: 0.4;
+    background: var(--primary-gray);
+    cursor: pointer;
 }
 
 .small-pc-slider .swiper-slide-thumb-active {
@@ -69,6 +71,7 @@
 .big-slider {
     border-radius: 32px;
     height: 442px !important;
+    background-color: var(--primary-gray);
 }
 
 .small-slider {

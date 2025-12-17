@@ -1,5 +1,3 @@
-.feedback {}
-
 .feedback-slide {
     width: 896px;
     display: flex;
@@ -11,6 +9,11 @@
     border-radius: 32px;
     background: var(--primary-gray-light);
     font-family: "Onest";
+
+}
+
+.swiper-slide-bg {
+    background-color: red;
 }
 
 .feedbackSlider {
