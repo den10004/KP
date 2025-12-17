@@ -234,4 +234,8 @@
     .feedback-btns {
         display: none;
     }
+
+    .read-more-btn {
+        font-size: 16px;
+    }
 }
