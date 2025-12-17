@@ -11,12 +11,15 @@
   <body>
     <header class="wrapper">
       <div class="header__container">
-        <div class="logo" style="color: var(--primary-black)">VAC</div>
-        <ul>
-          <li>Описание</li>
-          <li>Галерея</li>
-          <li>Производительность</li>
-          <li>Отзывы</li>
+        <div class="logo">VAC</div>
+
+        <ul class="nav-menu">
+          <li><a href="#description" class="nav-link">Описание</a></li>
+          <li><a href="#galery" class="nav-link">Галерея</a></li>
+          <li>
+            <a href="#efficiency" class="nav-link">Производительность</a>
+          </li>
+          <li><a href="#feedback" class="nav-link">Отзывы</a></li>
         </ul>
 
         <div class="header-burger">
@@ -58,7 +61,7 @@
       </div>
     </section>
 
-    <section class="specification">
+    <section class="specification" id="description">
       <div class="specification__wrap">
         <div>
           <div class="wrapper">
@@ -191,7 +194,7 @@
       </div>
     </section>
 
-    <section class="service">
+    <section class="service" id="galery">
       <div class="wrapper">
         <div class="label label-color-white">
           <div class="label-dot"></div>
@@ -518,7 +521,7 @@
       </div>
     </section>
 
-    <section class="efficiency">
+    <section class="efficiency" id="efficiency">
       <div class="wrapper">
         <div class="label label-color-black">
           <div class="label-dot"></div>
@@ -783,7 +786,7 @@
       </div>
     </section>
 
-    <section class="feedback sectionMargin">
+    <section class="feedback sectionMargin" id="feedback">
       <div class="wrapper" style="position: relative">
         <div class="label label-color-white">
           <div class="label-dot"></div>
@@ -937,10 +940,12 @@
         <div class="footer__list">
           <div class="footer__block">
             <ul class="footer__menu">
-              <li>Описание</li>
-              <li>Галерея</li>
-              <li>Производительность</li>
-              <li>Отзывы</li>
+              <li><a href="#description">Описание</a></li>
+              <li><a href="#galery">Галерея</a></li>
+              <li>
+                <a href="#efficiency">Производительность</a>
+              </li>
+              <li><a href="#feedback">Отзывы</a></li>
             </ul>
           </div>
           <div class="footer__block2">
@@ -958,6 +963,27 @@
   <script src="./src/js/swiper-bundle.min.js"></script>
 
   <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const burger = document.querySelector(".header-burger");
+      const container = document.querySelector(".header__container");
+
+      const mobileMenu = document.createElement("div");
+      mobileMenu.classList.add("mobile-menu");
+
+      const navMenu = document.querySelector(".nav-menu");
+      const menuClone = navMenu.cloneNode(true);
+      menuClone.style.display = "block";
+      menuClone.style.flexDirection = "column";
+      menuClone.style.gap = "0";
+
+      mobileMenu.appendChild(menuClone);
+      container.appendChild(mobileMenu);
+
+      burger.addEventListener("click", () => {
+        mobileMenu.classList.toggle("active");
+      });
+    });
+
     var swiper = new Swiper(".small-pc-slider", {
       spaceBetween: 10,
       slidesPerView: 3,

@@ -25,6 +25,9 @@
   --primary-green: rgba(58, 194, 112, 1)
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   padding: 0;
