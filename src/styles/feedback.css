@@ -16,7 +16,7 @@
 }
 
 .feedbackSlider {
-    margin-top: 56px;
+    margin-top: 60px;
 }
 
 .feedback__head {
@@ -33,7 +33,7 @@
 
 .feedback__user {
     display: flex;
-    gap: 10px;
+    gap: 18px;
 }
 
 .feedback__user>img {

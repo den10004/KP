@@ -53,7 +53,19 @@
 
 .warranty-link {
     margin-top: 40px;
+    border-radius: 40px;
+    position: relative;
+    z-index: 2;
+    display: inline-flex;
+    font-family: "Onest";
+    padding: 22px 32px;
 }
+
+.warranty-link>a {
+    font-size: 20px;
+    font-weight: 400;
+}
+
 
 .installment-link {
     margin-top: 40px;
@@ -84,10 +96,6 @@
         font-size: 16px;
     }
 
-    .warranty-link {
-        margin-top: 82px;
-    }
-
     .installment-link {
         margin-top: 40px;
     }
@@ -96,6 +104,21 @@
     .warranty__block>img {
         width: 240px;
         bottom: -50px;
+    }
+
+    .warranty-link {
+        margin-top: 82px;
+        border-radius: 40px;
+        position: relative;
+        z-index: 2;
+        display: inline-flex;
+        font-family: "Onest";
+        padding: 22px 32px;
+    }
+
+    .warranty-link>a {
+        font-size: 20px;
+        font-weight: 400;
     }
 }
 
