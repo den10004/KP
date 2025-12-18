@@ -3,9 +3,6 @@
 }
 
 
-.hero__group {
-    display: flex;
-}
 
 .hero__block {
     position: relative;
@@ -47,7 +44,7 @@
 .hero__group {
     display: flex;
     justify-content: space-between;
-    width: 990px;
+    width: 1020px;
     margin: 35px auto 37px auto;
 }
 
@@ -163,7 +160,8 @@
         font-size: 14px;
         width: 162px;
         padding: 8px 0px;
-        top: -35px;
+        top: -44px;
+        right: 34%;
     }
 
     .hero__label>img {
@@ -205,8 +203,8 @@
     }
 
     .hero__label {
-        top: -38px;
-        right: 2%;
+        top: -46px;
+        right: 30%;
     }
 }
 

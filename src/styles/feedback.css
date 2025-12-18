@@ -235,6 +235,7 @@
         margin-top: 20px;
     }
 
+    /*
     .feedbackSlider>.swiper-wrapper {
         display: flex;
         flex-direction: column;
@@ -255,7 +256,7 @@
     .feedback-btns {
         display: none;
     }
-
+*/
     .read-more-btn {
         font-size: 16px;
     }
@@ -270,8 +271,9 @@
         width: 100px;
     }
 
+    /*
     .feedbackSlider-button-next,
     .feedbackSlider-button-prev {
         display: none !important;
-    }
+    }*/
 }

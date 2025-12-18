@@ -126,9 +126,8 @@
             </div>
             <div class="block__desc">
               <ul class="block__labels">
-                <li><div>Гарантия</div></li>
+                <li><div>12 мес.</div></li>
                 <li><div>Рассрочка 0%</div></li>
-                <li><div>Готов к отгрузке</div></li>
               </ul>
 
               <h3>Predator 2000</h3>
@@ -1083,47 +1082,23 @@
 
     /* отзывы*/
 
-    document.addEventListener("DOMContentLoaded", function () {
-      const initSwiperIfNeeded = () => {
-        const feedbackSlider = document.querySelector(".feedbackSlider");
-
-        if (window.innerWidth > 550) {
-          if (feedbackSlider.classList.contains("swiper-initialized")) {
-            return;
-          }
-          var swiper3 = new Swiper(".feedbackSlider", {
-            slidesPerView: 1.5,
-            spaceBetween: 30,
-            watchOverflow: true,
-            navigation: {
-              nextEl: ".feedbackSlider-button-next",
-              prevEl: ".feedbackSlider-button-prev",
-            },
-            breakpoints: {
-              320: {
-                slidesPerView: 1,
-                spaceBetween: 16,
-              },
-              900: {
-                slidesPerView: 1.5,
-              },
-            },
-          });
-        } else {
-          if (
-            feedbackSlider.classList.contains("swiper-initialized") &&
-            feedbackSlider.swiper
-          ) {
-            feedbackSlider.swiper.destroy(true, true);
-          }
-        }
-      };
-      initSwiperIfNeeded();
-      let resizeTimeout;
-      window.addEventListener("resize", function () {
-        clearTimeout(resizeTimeout);
-        resizeTimeout = setTimeout(initSwiperIfNeeded, 250);
-      });
+    var swiper3 = new Swiper(".feedbackSlider", {
+      slidesPerView: 1.5,
+      spaceBetween: 30,
+      watchOverflow: true,
+      navigation: {
+        nextEl: ".feedbackSlider-button-next",
+        prevEl: ".feedbackSlider-button-prev",
+      },
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 16,
+        },
+        900: {
+          slidesPerView: 1.5,
+        },
+      },
     });
 
     document.querySelectorAll(".feedback").forEach((block) => {

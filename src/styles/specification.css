@@ -338,7 +338,6 @@
 @media (max-width: 550px) {
     .block__labels>li>div {
         padding: 0;
-        margin-left: 15px;
     }
 
     .block__slider {
@@ -347,10 +346,6 @@
 
     .specification__wrap {
         display: block;
-    }
-
-    .block__labels {
-        font-size: 12px;
     }
 
     .block__desc>h3 {
