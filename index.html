@@ -94,6 +94,9 @@
                       <img src="./src/images/pc.png" />
                     </div>
                     <div class="swiper-slide big-slider">
+                      <img src="./src/images/hero.webp" />
+                    </div>
+                    <div class="swiper-slide big-slider">
                       <img src="./src/images/pc.png" />
                     </div>
                   </div>
@@ -109,6 +112,9 @@
                     </div>
                     <div class="swiper-slide small-slider">
                       <img src="./src/images/pc.png" />
+                    </div>
+                    <div class="swiper-slide small-slider">
+                      <img src="./src/images/hero.webp" />
                     </div>
                     <div class="swiper-slide small-slider">
                       <img src="./src/images/pc.png" />
@@ -532,7 +538,7 @@
             и составляет 12 месяцев с момента оформления заказа
           </p>
 
-          <div class="btn-white warranty-link">
+          <div class="btn-white warranty-link warranty-link-border">
             <a href="#description" style="color: var(--primary-black)"
               >Посмотреть спецификацию</a
             >
@@ -1061,7 +1067,7 @@
       watchSlidesProgress: true,
     });
     var swiper2 = new Swiper(".big-pc-slider", {
-      spaceBetween: 10,
+      slidesPerView: 1,
       pagination: {
         el: ".swiper-pagination",
         clickable: true,

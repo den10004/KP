@@ -176,7 +176,6 @@
 
     .upgrade__headline>div {
         padding: 10px 17px;
-        font-size: 83px;
     }
 }
 
@@ -250,16 +249,19 @@
     .upgrade__headline>h3 {
         font-size: 24px;
         line-height: 118%;
+        padding-left: 10px;
     }
 
     .upgrade__headline>div {
         font-size: 64px;
         margin-top: 5px;
         border-radius: 17px;
+        height: 100px;
     }
 
     .upgrade-container {
-        margin: 20px auto 18px auto;
+        margin: 17px auto 26px auto;
+        gap: 16px;
     }
 
     .upgrade__card {
@@ -286,14 +288,10 @@
         font-size: 24px;
     }
 
-    .upgrade-container {
-        gap: 16px;
-    }
-
     .card-descr {
         display: flex;
         flex-direction: column-reverse;
-        gap: 10px;
+        gap: 14px;
     }
 
     .card-descr>button {
@@ -312,6 +310,8 @@
     .card-descr>p {
         font-size: 14px;
     }
+
+
 }
 
 

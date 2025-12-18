@@ -134,6 +134,8 @@ button {
   border-radius: 50%;
 }
 
+
+
 .select-btn {
   border-radius: 41px;
   background-color: var(--primary-gray);
@@ -209,7 +211,7 @@ button {
   .select-btn {
     border-radius: 41px;
     font-size: 14px;
-    padding: 12px 24px;
+    padding: 15px 26px;
   }
 
   .section-wrap {
@@ -232,14 +234,13 @@ button {
   }
 
   .label {
-    padding: 16px 10px;
+    padding: 14px 10px;
     font-size: 14px;
   }
 }
 
 @media (max-width: 425px) {
   .specification-link {
-    padding: 21px 2px;
-    width: 100%;
+    padding: 21px 31px;
   }
 }

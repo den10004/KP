@@ -14,11 +14,6 @@
 
 /* slider*/
 
-.swiper {
-    width: 100%;
-    height: 100%;
-}
-
 .swiper-slide {
     display: flex !important;
     justify-content: center;
@@ -33,6 +28,7 @@
 
 .swiper {
     width: 100%;
+    height: 100%;
     height: auto;
     margin-left: auto;
     margin-right: auto;
@@ -316,16 +312,14 @@
 
     .block__slider {
         width: 450px;
+        margin: 0 auto;
     }
 
     .specification__block {
         flex-direction: column;
-        gap: 20px;
+        gap: 18px;
     }
 
-    .block__slider {
-        margin: 0 auto;
-    }
 
     .specification {
         padding: 30px 0 30px 0;
@@ -341,8 +335,13 @@
 }
 
 @media (max-width: 550px) {
+    .block__labels>li>div {
+        padding: 0;
+        margin-left: 15px;
+    }
+
     .block__slider {
-        width: calc(100% - 20px);
+        width: 100%;
     }
 
     .specification__wrap {
@@ -384,7 +383,7 @@
 
     .specifications__list {
         margin-top: 15px;
-        gap: 4px;
+        gap: 8px;
     }
 
     .block__specifications>h3 {
@@ -406,8 +405,6 @@
         border-radius: 16px;
     }
 
-
-
     .block__specifications>button>svg {
         width: 15px;
     }
@@ -420,7 +417,7 @@
     }
 
     .specification {
-        padding: 35px 0 30px 0;
+        padding: 30px 0 30px 0;
         border-radius: 40px;
     }
 

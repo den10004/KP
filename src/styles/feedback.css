@@ -63,7 +63,7 @@
 
 .feedback__img {
     display: flex;
-    gap: 10px;
+    gap: 15px;
     margin-top: 24px;
 }
 
@@ -236,12 +236,12 @@
     }
 
     .swiper {
-        overflow: visible !important;
+        /*   overflow: visible !important;*/
     }
 
+    /*
     .swiper-wrapper {
         display: flex;
-        flex-direction: column;
         gap: 20px;
         transform: none !important;
         width: 100% !important;
@@ -255,7 +255,7 @@
         opacity: 1 !important;
         margin: 0 !important;
     }
-
+*/
     .feedback-btns {
         display: none;
     }
