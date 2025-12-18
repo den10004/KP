@@ -111,7 +111,6 @@
     }
 
     .warranty-link {
-
         border-radius: 40px;
         position: relative;
         z-index: 2;
@@ -147,7 +146,6 @@
     }
 
     .warranty-link {
-
         padding: 22px 51px;
     }
 
@@ -177,5 +175,15 @@
     .warranty__block>button {
         padding: 21px 2px;
         width: 100%;
+    }
+
+    .warranty-link {
+        padding: 22px 51px;
+    }
+}
+
+@media (max-width: 360px) {
+    .warranty-link {
+        padding: 22px 27px;
     }
 }

@@ -235,33 +235,35 @@
         margin-top: 20px;
     }
 
-    .swiper {
-        /*   overflow: visible !important;*/
-    }
-
-    /*
-    .swiper-wrapper {
+    .feedbackSlider>.swiper-wrapper {
         display: flex;
+        flex-direction: column;
         gap: 20px;
         transform: none !important;
         width: 100% !important;
         height: auto !important;
     }
 
-    .swiper-slide {
+    .feedbackSlider>.swiper-wrappe.swiper-slide {
         width: 100% !important;
         height: auto !important;
         transform: none !important;
         opacity: 1 !important;
         margin: 0 !important;
     }
-*/
+
     .feedback-btns {
         display: none;
     }
 
     .read-more-btn {
         font-size: 16px;
+    }
+
+    .feedback__img {
+        overflow-x: auto;
+        max-width: 100%;
+        width: auto;
     }
 
     .feedback__img>img {

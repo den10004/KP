@@ -20,7 +20,8 @@
     align-items: center;
 }
 
-.swiper-slide img {
+.small-slider img,
+.big-slider img {
     display: block;
     width: 77%;
     object-fit: cover;
