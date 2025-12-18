@@ -68,6 +68,7 @@
     background: var(--white-01);
     border-radius: 40px;
     padding: 3px 15px;
+    margin-left: -20px;
 }
 
 .upgrade__headline>div {
@@ -309,6 +310,10 @@
 
     .card-descr>p {
         font-size: 14px;
+    }
+
+    .upgrade__headline>h3>span {
+        margin-left: -10px;
     }
 
 
