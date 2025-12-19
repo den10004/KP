@@ -90,9 +90,6 @@
 }
 
 .hero__label {
-    position: absolute;
-    top: 42px;
-    left: 69%;
     background: rgba(161, 203, 255, 0.2);
     width: 267px;
     border-radius: 50px;
@@ -102,7 +99,6 @@
     font-size: 20px;
     line-height: 100%;
     text-align: center;
-    transform: rotate(10deg);
     backdrop-filter: blur(5px);
 }
 
@@ -126,49 +122,33 @@
     }
 
     .hero {
-        margin-top: 110px;
+        margin-top: 50px;
     }
 
     .hero__group>div>img {
         max-width: 83%;
     }
 
-    .hero__label {
-        top: -53px;
-        left: auto;
-        right: 16%;
-    }
 }
 
 @media (max-width: 768px) {
-    .hero__label {
-        font-size: 16px;
-        width: 218px;
-    }
-
     .hero__label>img {
         width: 16px;
     }
 }
 
 @media (max-width: 550px) {
-    .hero {
-        margin-top: 62px;
-    }
-
-    .hero__label {
-        font-size: 14px;
-        width: 162px;
-        padding: 8px 0px;
-        top: -44px;
-        right: 34%;
-    }
-
     .hero__label>img {
         width: 14px;
     }
-}
 
+    .hero__label {
+        width: 220px;
+        font-size: 16px;
+        padding: 10px 10px;
+    }
+
+}
 
 @media (max-width: 425px) {
     .hero__content>h2 {
@@ -181,7 +161,7 @@
 
     .hero__label {
         font-size: 12px;
-        top: -39px;
+        width: 143px;
     }
 
     .hero__content>p {
@@ -197,16 +177,6 @@
     }
 }
 
-@media (max-width: 370px) {
-    .hero {
-        margin-top: 85px;
-    }
-
-    .hero__label {
-        top: -46px;
-        right: 30%;
-    }
-}
 
 @media (max-width: 360px) {
     .hero__content>h2 {
